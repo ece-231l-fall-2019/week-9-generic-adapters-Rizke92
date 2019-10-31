@@ -24,11 +24,13 @@ class Stack
 	size_t size() const{return c.size();}
 	
 	bool empty() const{return c.empty();}
+	
 	Stack<T>& operator=(const Stack<T>& _stack)
 	{
 		c = _stack.c;
 		return *this;
 	}
+	
 	template<typename R>
 	friend bool operator==(const Stack<R>&, const Stack<R>&);
 	
