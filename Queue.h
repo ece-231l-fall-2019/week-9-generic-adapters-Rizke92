@@ -8,28 +8,27 @@ class Queue
      List<T> c;
 	 
   public:
-	
 	Queue(){}
 	
 	Queue(std::initializer_list<T> link): c(link){}
 	
 	T& front(){return c.front();}
-	 
-    T& back(){return c.back();}
 	
-    const T& front() const{return c.front();}
-	 
-    const T& back() const{return c.back();}
+	T& back(){return c.back();}
+	
+	const T& front() const{return c.front();}
+	
+	const T& back() const{return c.back();}
 	
 	void push(const T& w){c.push_back(w);}
 	
 	void pop(){c.pop_front();}
 	
-    size_t size() const{return c.size();}
-	 
-    bool empty() const{return c.empty();}
-	 
-    Queue<T>& operator=(const Queue<T>& _queue)
+	size_t size() const{return c.size();}
+	
+	bool empty() const{return c.empty();}
+	
+	Queue<T>& operator=(const Queue<T>& _queue)
 	{
 		c = _queue.c;
 		return *this;
